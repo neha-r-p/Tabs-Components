@@ -1,8 +1,8 @@
 
 class TabLink {
-  constructor(element) {
+  constructor(TLelement) {
     // Assign this.element to the passed in DOM element
-    // this.element;
+    this.TLelement = TLelement;
     
     // Get the custom data attribute on the Link
     // this.data;
