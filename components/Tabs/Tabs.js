@@ -12,10 +12,10 @@ class TabLink {
     this.itemElement = document.querySelector(`.tabs-item[data-tab='${this.data}']`);
   //  console.log(this.itemElement);
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(this.itemElement);
-    
+    this.itemElement = new TabItem(this.itemElement);
+
     // Add a click event listener on this instance, calling the select method on click
-    this.tabLink.addEventListener('click', () => this.select());
+    this.itemElement.addEventListener('click', () => this.select());
 
   };
 
@@ -35,9 +35,9 @@ class TabLink {
 }
 
 class TabItem {
-  constructor(element) {
+  constructor(tabItem) {
     // Assign this.element to the passed in element
-    // this.element;
+    this.tabItem = tabItem;
   }
 
   select() {
